@@ -2,12 +2,12 @@ import com.sun.org.apache.xpath.internal.operations.Bool
 
 fun main(args: Array<String>) {
 
-    val fullMenu = cookies.map {
-        "${it.name} - $${it.price}"
+    val softBakedMenu = cookies.filter {
+        it.softBaked
     }
-    println("Full Menu:")
-    fullMenu.forEach {
-        println(it)
+    println("Soft cookies:")
+    softBakedMenu.forEach {
+        println("${it.name} - $${it.price}")
     }
 }
 
